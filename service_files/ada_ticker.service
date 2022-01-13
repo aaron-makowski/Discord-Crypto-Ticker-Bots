@@ -1,0 +1,13 @@
+[Unit]
+Description= Starts the GCAT Airdrop Bot
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=10
+User=zero
+ExecStart=/usr/bin/python3 /home/GCAT_AD_BOT/main.py
+
+[Install]
+WantedBy=multi-user.target

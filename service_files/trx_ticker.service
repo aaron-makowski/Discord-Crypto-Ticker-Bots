@@ -1,0 +1,13 @@
+[Unit]
+Description= Starts TRX ticker bot for the discord
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=10
+User=zero
+ExecStart=/usr/bin/python3 /home/zero/ROBOT/ticker_bots/trx_ticker.py
+
+[Install]
+WantedBy=multi-user.target
